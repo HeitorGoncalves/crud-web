@@ -7,7 +7,7 @@ import { Form, Container } from "./styles";
 
 import api from "../../services/api";
 
-class Cadastro extends Component {
+class UsuarioCadastro extends Component {
   state = {
     id: "",
     nome: "",
@@ -74,4 +74,4 @@ class Cadastro extends Component {
   }
 }
 
-export default Cadastro;
+export default UsuarioCadastro;

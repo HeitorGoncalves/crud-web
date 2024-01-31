@@ -7,7 +7,7 @@ import { Form, Container } from "./styles";
 
 import api from "../../services/api";
 
-class Editar extends Component {
+class UsuarioEditar extends Component {
   state = {
     id: "",
     nome: "",
@@ -79,4 +79,4 @@ class Editar extends Component {
   }
 }
 
-export default Editar;
+export default UsuarioEditar;

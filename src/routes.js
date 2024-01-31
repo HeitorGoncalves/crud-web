@@ -1,34 +1,28 @@
-import React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { isAuthenticated } from "./services/auth";
-import Cadastro from "./pages/Usuario/cadastro";
-import Editar from "./pages/Usuario/editar";
-import Usuario from "./pages/Usuario";
+import Singin from './pages/Singin';
+import Singup from './pages/Singup';
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={props =>
-      isAuthenticated() ? (
-        <Component {...props} />
-      ) : (
-        <Redirect to={{ pathname: "/", state: { from: props.location } }} />
-      )
-    }
-  />
-);
+import Dashboard from './pages/Dashboard';
 
-const Routes = () => (
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={Usuario} />
-      <Route path="/usuario/cadastro" component={Cadastro} />
-      <Route path="/usuario/editar" component={Editar} />
-      <PrivateRoute path="/app" component={() => <h1>App</h1>} />
-      <Route path="*" component={() => <h1>Page not found</h1>} />
-    </Switch>
-  </BrowserRouter>
-);
+import Usuario from './pages/Usuario';
+import UsuarioCadastro from './pages/Usuario/cadastro';
+import UsuarioEditar from './pages/Usuario/editar';
 
-export default Routes;
+const AppRoutes = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Singin />} />
+        <Route path="/Singup" element={<Singup />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Usuario" element={<Usuario />} />
+        <Route path="/Usuario/cadastro" element={<UsuarioCadastro />} />
+        <Route path="/Usuario/editar" element={<UsuarioEditar />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default AppRoutes;
