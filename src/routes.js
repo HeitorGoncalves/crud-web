@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Singin from './pages/Singin';
 import Singup from './pages/Singup';
+import ForgotPassword from './pages/ForgotPassword';
 
 import Dashboard from './pages/Dashboard';
 
@@ -16,6 +17,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Singin />} />
         <Route path="/Singup" element={<Singup />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Usuario" element={<Usuario />} />
         <Route path="/Usuario/cadastro" element={<UsuarioCadastro />} />

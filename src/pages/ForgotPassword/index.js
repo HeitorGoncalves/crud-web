@@ -62,7 +62,7 @@ export default function SignInSide() {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Login
+              Esqueceu sua senha?
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
@@ -75,39 +75,23 @@ export default function SignInSide() {
                 autoComplete="email"
                 autoFocus
               />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Senha"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Lembrar senha"
-              />
+
+
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Entrar
+                Enviar pedido
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="/ForgotPassword" variant="body2">
-                    Esqueceu sua senha?
+                  <Link href="/" variant="body2">
+                    Voltar para fazer login
                   </Link>
                 </Grid>
-                <Grid item>
-                  <Link href="/Singup" variant="body2">
-                    {"Não tem uma conta? Inscrever-se"}
-                  </Link>
-                </Grid>
+
               </Grid>
               <Copyright sx={{ mt: 5 }} />
             </Box>
