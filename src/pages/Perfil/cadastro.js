@@ -13,12 +13,13 @@ import Badge from '@mui/material/Badge';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
+import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from '../../components/listItems';
 import { Copyright } from '../../components/copyright';
-import TabelaAgenda from '../../components/TabelaAgenda';
+import FormPerfil from '../../components/FormPerfil';
 
 
 const drawerWidth = 240;
@@ -70,7 +71,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function Agenda() {
+export default function PerfilCadastro() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -105,7 +106,7 @@ export default function Agenda() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Agenda
+              Perfil Cadastro
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -150,10 +151,10 @@ export default function Agenda() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
 
-
+              {/* Recent Orders */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <TabelaAgenda />
+                  <FormPerfil />
                 </Paper>
               </Grid>
 

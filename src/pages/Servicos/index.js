@@ -18,7 +18,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from '../../components/listItems';
 import { Copyright } from '../../components/copyright';
-import TabelaAgenda from '../../components/TabelaAgenda';
+import TabelaServicos from '../../components/TabelaServicos';
 
 
 const drawerWidth = 240;
@@ -70,7 +70,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function Agenda() {
+export default function Servicos() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -105,7 +105,7 @@ export default function Agenda() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Agenda
+              Serviços / Trabalhos
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -153,7 +153,7 @@ export default function Agenda() {
 
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <TabelaAgenda />
+                  <TabelaServicos />
                 </Paper>
               </Grid>
 
